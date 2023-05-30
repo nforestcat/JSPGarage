@@ -1,0 +1,19 @@
+@charset "UTF-8";
+h1{
+	color:blue;
+}
+#wrap{
+	width:300px;
+	margin:0 auto;
+	border: 5px solid black;
+	padding: 30px;
+}
+span{
+	display: inline-block;
+	width: 80px;
+}
+form > input:last-child{
+	display:block;
+	margin: 0 auto;
+	width: 150px;
+}
