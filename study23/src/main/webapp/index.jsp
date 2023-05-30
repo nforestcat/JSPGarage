@@ -9,12 +9,14 @@
 	</head>
 	<body>
 		<%
-			Sample s = new Sample();
+			Sample s = new Sample(4,4);
 		
 		%>
 		<h1>이름 : <%=s.name %></h1>
 		<h1>나이 : <%=s.age %></h1>
 		<h1>주소 : <%=s.address %></h1>
 		
+		
+		<%=s.makeTable(10, 10) %>
 	</body>
 </html>
