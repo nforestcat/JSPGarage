@@ -19,6 +19,9 @@
 				display:block;
 				width:100%;
 			}
+			.phone{
+			 width: 45px;
+			}
 		</style>
 	</head>
 	<body>
@@ -32,7 +35,10 @@
 				<br>
 				<span>이메일</span><input type="text" name="email">
 				<br>
-				<span>연락처</span><input type="text" name="phone">
+				<span>연락처</span>
+				<input type="text" class="phone" name="first">
+				<input type="text" class="phone" name="second">
+				<input type="text" class="phone" name="third">
 				<br>
 				<input type="submit" value="입력하기">
 			</form>
