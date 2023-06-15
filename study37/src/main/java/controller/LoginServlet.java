@@ -49,7 +49,8 @@ public class LoginServlet extends HttpServlet {
 			//아이디 없음
 			request.setAttribute("message", "존재하지 않는 회원입니다.");
 		}
-			
+		RequestDispatcher dis = request.getRequestDispatcher(url);
+		dis.forward(request, response);
 		
 	}
 

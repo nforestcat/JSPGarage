@@ -7,9 +7,8 @@
 		<title>메인페이지</title>
 	</head>
 	<body>
-		<h1>여기는 메인페이지 입니다</h1>
-		<a href="Login.do">로그인하러 가기</a>
-		<a href="list.jsp">전체 멤버 조회</a>
-		<a href="Join.do">회원가입</a>
+		<h1>안녕하세요 ${loginUser.name}님, ${loginUser.userid }</h1>
+		<a href="Logout.do">로그아웃</a><br>
+		<a href="Update.do">회원정보 수정</a>
 	</body>
 </html>
