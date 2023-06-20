@@ -9,6 +9,6 @@
 	<body>
 		<h1>안녕하세요 ${loginUser.name}님, ${loginUser.userid }</h1>
 		<a href="Logout.do">로그아웃</a><br>
-		<a href="Update.do">회원정보 수정</a>
+		<a href="Update.do?userid="+${loginUser.userid}>회원정보 수정</a>
 	</body>
 </html>

@@ -17,7 +17,7 @@ public class LoginServlet extends HttpServlet {
        
 	//a태그의 클릭 또는 브라우저 주소창에 직접 적은 경우는 doGet이 실행
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet 실행 확인!!");
+		System.out.println("LoginServlet doGet 실행 확인!!");
 		RequestDispatcher dis = request.getRequestDispatcher("login.jsp");
 		dis.forward(request, response);
 	}
@@ -25,7 +25,7 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		System.out.println("doPost 실행 확인!!");
+		System.out.println("LoginServlet doPost 실행 확인!!");
 		String url="login.jsp";
 		request.setCharacterEncoding("utf-8");
 		String userid = request.getParameter("userid");
