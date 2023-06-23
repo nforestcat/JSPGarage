@@ -1,6 +1,9 @@
 package DAO;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
 import beans.Member;
 
 public class MemberDAO {
@@ -263,5 +266,40 @@ public class MemberDAO {
 			}
 		}
 		return result;
+	}
+	public List<Member> getList() {
+		
+		List<Member> list = new ArrayList<>();
+		String sql = "select * from member;";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				Member m = new Member();
+				m.setNum(rs.getString("num"));
+				m.setName(rs.getString("name"));
+				m.setUserid(rs.getString("userid"));
+				m.setPwd(rs.getString("pwd"));
+				m.setEmail(rs.getString("email"));
+				m.setPhone(rs.getString("phone"));
+				m.setAdmin(rs.getString("admin"));
+				list.add(m);
+			}
+		} catch(Exception e){
+			System.out.println("MemberDAO.getList 접속 중 오류 발생 : "+e);
+		} finally {
+			try {
+				if(rs!=null)rs.close();
+				if(pstmt!=null)pstmt.close();
+				if(conn!=null)conn.close();
+			}catch(Exception ex) {
+				System.out.println("MemberDAO.getList 접속 종료 중 오류 발생 : "+ex);
+			}
+		}
+		return list;
 	}
 }

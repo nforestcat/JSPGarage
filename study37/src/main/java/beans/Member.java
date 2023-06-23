@@ -1,5 +1,11 @@
 package beans;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Member {
 	private String num;
 	private String name;
@@ -49,5 +55,8 @@ public class Member {
 	}
 	public void setAdmin(String admin) {
 		this.admin = admin;
+	}
+	public String toString() {
+		return name;
 	}
 }
