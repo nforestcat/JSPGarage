@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<td>이름</td>
+		<td>과목</td>
+		<td>시간</td>
+	</tr>
+	<tr>
+		<td>이영준</td>
+		<td>AJAX</td>
+		<td>09:00</td>
+	</tr>
+	<tr>
+		<td>고희선</td>
+		<td>android</td>
+		<td>14:00</td>
+	</tr>
+	<tr>
+		<td>이진선</td>
+		<td>HTML</td>
+		<td>16:30</td>
+	</tr>
+</table>
