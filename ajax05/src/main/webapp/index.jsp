@@ -62,21 +62,26 @@
 			}
 			//화면에 결과값을 표현해주는 함수
 			function updateList(){
+				clearList();
 				let list = document.getElementById("list");
 				let result = XHR.responseXML.getElementsByTagName("pet");
 				let option = null;
-				while(list.hasChildNodes()){
-					
+				/*while(list.hasChildNodes()){
 					list.removeChild(list.childNodes[0]);
-					
-					
-				}
+				}*/
 				for(let i = 0; i < result.length; i++){
 					option=document.createElement("option");
 					option.appendChild(document.createTextNode(result[i].firstChild.nodeValue));
 					list.appendChild(option);
 				}
 				
+			}
+			//기존에 있었던 표시를 제거해주는 기능
+			function clearList(){
+				let list = document.getElementById("list");
+				while(list.childNodes.length>0){
+					list.removeChild(List.childNodes[0]);
+				}
 			}
 		</script>
 	</body>
