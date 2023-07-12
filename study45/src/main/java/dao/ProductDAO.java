@@ -87,4 +87,22 @@ public class ProductDAO {
 		}
 		return list;
 	}
+	public void insert(ProductDTO p) {
+		String sql = "insert into product (name, price, pictureurl, description) values (?,?,?,?)";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, p.getName());
+			pstmt.setInt(2, p.getPrice());
+			pstmt.setString(3, p.getPictureurl());
+			pstmt.setString(4, p.getDescription());
+			pstmt.execute();
+		} catch (Exception e) {
+			System.out.println("insert 접속 중 오류 발생 : " + e);
+		} finally {
+			close(conn, pstmt);
+		}
+	}
 }

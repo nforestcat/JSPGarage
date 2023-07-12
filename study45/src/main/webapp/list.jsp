@@ -6,11 +6,36 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
+		<style>
+			#wrap{
+				width:900px;
+				margin: 0 auto;
+			}
+			table{
+				width: 100%;
+				line-height: 25px;
+				border-collapse:collapse;
+			}
+			td, th{
+				border: 1px solid black;
+			}
+			th {
+				background-color: yellowgreen;
+			}
+			img{
+				width:300px;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="wrap">
 			<h1>상품리스트</h1>
 			<table>
+				<tr>
+					<td colspan="5" style="text-align: right;">
+						<a href="ProductWrite">상품등록</a>
+					</td>
+				</tr>
 				<tr>
 					<th>번호</th>
 					<th>이름</th>
